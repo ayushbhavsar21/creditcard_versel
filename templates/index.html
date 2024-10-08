@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Web APP</title>
+    <link rel="stylesheet" href="../static/css/credit_default.css">
+    <link rel="stylesheet" href= "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
+
+    <!-- Bootstrap Font Icon CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+</head>
+<body>
+    <header>
+        <a ></a>
+      
+        <ul class="navbarr">
+          <li><a href="/" class="active">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="mailto:Ritikpadhi1507@gmail.com">Contact</a></li>
+        </ul>
+      
+        <div class="mainn">
+          <a href="https://www.instagram.com/ritik__1507/" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/ritikpadhi/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          <a href="https://github.com/Ritik1507" class="GitHub"><i class="bi bi-github"></i></a>
+         
+          <div class="bi-list" id="menu-icon"></div>
+        </div>
+      </header>
+  
+  
+
+
+    
+
+
+      
+<div class="containers">
+    <div class="row header">
+      <h1>Credit Default Prediction &nbsp;</h1>
+      <h3>predicts if the Customer is going to Default on payments or Not </h3>
+    </div>
+    <div class="row body">
+      <form class="form-detail" action="/predict" method="post">
+        <ul>
+          
+          <!-- <li>
+            <p class="left">
+              <label for="first_name">First name</label>
+              <input type="text" name="first_name" placeholder="name" />
+            </p>
+            <p class="left rights">
+              <label for="last_name">Last name</label>
+              <input type="text" name="last_name" placeholder="last name" />      
+            </p>
+          </li> -->
+          <li>
+            <p>
+                <label for="PAY_1 "> Repayment status in September :</label>
+              
+					
+                <select name="Repayment status in September" id="Repayment status in September" class="input-text" placeholder="Repayment status in September" required required>
+                  <option value="-1">Pay duly (-1)</option>
+                  <option value="-2">No consumption (-2)</option>
+                  <option value="0">Use of revolving credit (0)</option>
+                  <option value="1">Payment delay for one month (1)</option>
+                  <option value="2">payment delay for two months (2)</option>
+                  <option value="3">payment delay for three months (3)</option>
+                  <option value="4">payment delay for four months (4)</option>
+                  <option value="5">payment delay for five months (5)</option>
+                  <option value="6">payment delay for six months (6)</option>
+                  <option value="7">payment delay for seven months (7)</option>
+                  <option value="8">payment delay for eight months (8)</option>
+                  <option value="9">payment delay for Nine months or above (9)</option>
+                 
+                
+                </select> 
+            </p>
+          </li>
+          <li>
+            <p>
+                <label for="LIMIT_BAL"> Limit Balance :</label>
+                <input type="text" name="Limit Balance" id="Limit Balance" class="input-text" placeholder="Limit Balance" required> 
+            </p>
+          </li>
+          
+          <li>
+            <p>
+                <label for="BILL_AMT1"> First Bill Amount :</label>
+                <input type="text" name="First Bill Amount" id="First Bill Amount" class="input-text" placeholder="First Bill Amount" required>
+         </p>
+          </li>
+          <li>
+            <p>
+                <label for="PAY_AMT1"> Payment Amount In September:</label>
+                <input type="text" name="Payment Amount In September" id="Payment Amount In September" class="input-text" placeholder="Payment Amount In September" required>
+             </p>
+          </li>
+          <li>
+            <p>
+                <label for="PAY_AMT2"> Payment Amount In August:</label>
+						<input type="text" name="Payment Amount In August" id="Payment Amount In August" class="input-text" placeholder="Payment Amount In August" required>
+				  </p>
+          </li>
+          <li>
+            <p>
+              
+              <label for="PAY_2 "> Repayment status in August :</label>
+
+              <select name="Repayment status in August" id="Repayment status in August" class="input-text" placeholder="Repayment status in August" required required>
+                <option value="-1">Pay duly (-1)</option>
+                  <option value="-2">No consumption (-2)</option>
+                  <option value="0">Use of revolving credit (0)</option>
+                  <option value="1">Payment delay for one month (1)</option>
+                  <option value="2">payment delay for two months (2)</option>
+                  <option value="3">payment delay for three months (3)</option>
+                  <option value="4">payment delay for four months (4)</option>
+                  <option value="5">payment delay for five months (5)</option>
+                  <option value="6">payment delay for six months (6)</option>
+                  <option value="7">payment delay for seven months (7)</option>
+                  <option value="8">payment delay for eight months (8)</option>
+                  <option value="9">payment delay for Nine months or above (9)</option>
+               
+              
+              </select> 
+			 </p>
+          </li>
+          <li>
+            <p>
+                <label for="MARRIAGE"> Marriage status:</label>
+				
+					
+            <select   name="Marriage status" id="Marriage status" class="input-text" placeholder="Marriage status"  required>
+              <option value="1">Married (1)</option>
+              <option value="2">Single (2)</option>
+              <option value="3">Divorced (3)</option>
+              <option value="0">others (0)</option>
+             
+            
+            </select>
+			</p>
+          </li>
+          <li>
+            <p>
+               
+            <label for="SEX"> Gender :</label>
+            <select  name="Gender" id="Gender" class="input-text" placeholder="Gender" required>
+              <option value="1">Male (1)</option>
+              <option value="2">Female (2)</option>
+            
+            </select>
+			</p>
+          </li>
+          <li>
+            <p>
+                <label for="EDUCATION"> Highest Education:</label>
+					
+            <select   name="Highest Education" id="Highest Education" class="input-text" placeholder="Highest Education" required>
+              <option value="3">High school (3)</option>
+              <option value="1">Graduate school (1)</option>
+              <option value="2">University (2)</option>
+              <option value="0">Others (0)</option>
+             
+            
+            </select>
+
+					</p>
+          </li>
+         
+       <!--   <li>
+            <p>
+              <label for="email">email <span class="req">*</span></label>
+              <input type="email" name="email" placeholder="email@gmail.com" />
+            </p>
+          </li>    
+          <li>
+            <p>
+              <label for="Phone NO">Phone NO. <span class="req">*</span></label>
+              <input type="Phone NO" name="Phone NO" placeholder="  " />
+            </p>
+          </li>      
+          <li><div class="divider"></div></li>
+          <li>
+            <label for="comments">comments</label>
+            <textarea cols="46" rows="3" name="comments"></textarea>
+          </li>-->
+          
+          <li>
+          	<input type="submit" name="register" class="register" value="Predict">
+          </li>
+          
+        </ul>
+      </form>  
+    </div>
+  </div>
+
+
+
+
+
+    <script src="../static/js/credit_default.js"></script>
+</body>
+</html>

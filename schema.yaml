@@ -1,0 +1,16 @@
+COLUMNS:
+   PAY_1     :   int64 
+   LIMIT_BAL :   float64
+   BILL_AMT1 :   float64 
+   PAY_AMT1  :   float64
+   PAY_AMT2  :   float64
+   PAY_2     :   int64 
+   MARRIAGE  :   int64  
+   SEX       :   int64  
+   EDUCATION :   int64  
+   default_pay : int64 
+
+
+TARGET_COLUMN:
+    name : default_pay
+    
